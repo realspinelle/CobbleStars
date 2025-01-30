@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.friselis.cobblestars.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "DuelingGloveMixin",
+    "ProjectileEntityMixin",
+    "ScreenHandlerMixin",
+    "ThrownEntityMixin",
+    "ThrownItemEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

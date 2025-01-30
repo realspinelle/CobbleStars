@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblestars",
+  "version": "${version}",
+  "name": "CobbleStars",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "org.friselis.cobblestars.CobbleStars"
+    ]
+  },
+  "mixins": [
+    "cobblestars.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

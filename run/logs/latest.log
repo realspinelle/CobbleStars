@@ -1,0 +1,22 @@
+[01:28:06] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
+[01:28:06] [main/WARN] (FabricLoader/Resolution) Mod resolution failed
+[01:28:06] [main/INFO] (FabricLoader/Resolution) Immediate reason: [HARD_DEP cobblemon 1.5.2+1.20.1 {depends fabric-api @ [*]}, HARD_DEP_INCOMPATIBLE_PRESELECTED fabric-api 0.97.0+1.20.4 {depends minecraft @ [>=1.20.3- <1.20.5-]}, ROOT_FORCELOAD_SINGLE cobblemon 1.5.2+1.20.1]
+[01:28:06] [main/INFO] (FabricLoader/Resolution) Reason: [HARD_DEP fabric-api 0.97.0+1.20.4 {depends minecraft @ [>=1.20.3- <1.20.5-]}, HARD_DEP numismatic-overhaul 0.2.14+1.20 {depends cardinal-components-entity @ [*]}, HARD_DEP numismatic-overhaul 0.2.14+1.20 {depends owo @ [>=0.9.2]}]
+[01:28:06] [main/INFO] (FabricLoader/Resolution) Fix: add [add:cardinal-components-entity 1 ([(-∞,∞)]), add:owo 0.9.2 ([[0.9.2,∞)])], remove [cobblestars 1.0-SNAPSHOT], replace [[minecraft 1.20.1] -> add:minecraft 1.20.3- ([[1.20.3-,1.20.5-)])]
+[01:28:06] [main/ERROR] (FabricLoader) Incompatible mods found!
+net.fabricmc.loader.impl.FormattedException: Some of your mods are incompatible with the game or each other!
+A potential solution has been determined, this may resolve your problem:
+	 - Install cardinal-components-entity, any version.
+	 - Install owo, version 0.9.2 or later.
+	 - Remove mod 'CobbleStars' (cobblestars) 1.0-SNAPSHOT ([/home/linuxgaming/IdeaProjects/CobbleStars/build/classes/java/main, /home/linuxgaming/IdeaProjects/CobbleStars/build/resources/main]).
+	 - Replace 'Minecraft' (minecraft) 1.20.1 with any version between 1.20.3- (inclusive) and 1.20.5- (exclusive).
+More details:
+	 - Mod 'Fabric API' (fabric-api) 0.97.0+1.20.4 requires any version between 1.20.3- (inclusive) and 1.20.5- (exclusive) of 'Minecraft' (minecraft), but only the wrong version is present: 1.20.1!
+	 - Mod 'Numismatic Overhaul' (numismatic-overhaul) 0.2.14+1.20 requires any version of cardinal-components-entity, which is missing!
+	 - Mod 'Numismatic Overhaul' (numismatic-overhaul) 0.2.14+1.20 requires version 0.9.2 or later of owo, which is missing!
+	at net.fabricmc.loader.impl.FormattedException.ofLocalized(FormattedException.java:51) ~[fabric-loader-0.16.9.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:196) ~[fabric-loader-0.16.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) ~[fabric-loader-0.16.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) ~[fabric-loader-0.16.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) ~[fabric-loader-0.16.9.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[?:?]
