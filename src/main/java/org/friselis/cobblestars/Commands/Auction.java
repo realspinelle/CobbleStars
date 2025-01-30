@@ -12,21 +12,17 @@ import org.friselis.cobblestars.SafariAuction.SafariAuctionScreenHandler;
 
 public class Auction {
    public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-      dispatcher.register((LiteralArgumentBuilder)CommandManager.literal("auction").executes((context) -> {
-         ServerCommandSource source = (ServerCommandSource)context.getSource();
-         Entity patt807$temp = source.getEntity();
-         if (patt807$temp instanceof ServerPlayerEntity) {
-            ServerPlayerEntity player = (ServerPlayerEntity)patt807$temp;
-
-            try {
+      dispatcher.register(CommandManager.literal("auction").executes((context) -> {
+         ServerCommandSource source = context.getSource();
+         Entity entity = source.getEntity();
+         if (entity instanceof ServerPlayerEntity player) {
+             try {
                SafariAuctionScreenHandler.open(player);
             } catch (Exception var4) {
-               CobbleStars.LOGGER.error((String)"Error opening auction", (Throwable)var4);
+               CobbleStars.LOGGER.error("Error opening auction", var4);
             }
          } else {
-            source.sendFeedback(() -> {
-               return Text.literal("This command can only be run by a player.");
-            }, false);
+            source.sendFeedback(() -> Text.literal("This command can only be run by a player."), false);
          }
 
          return 1;

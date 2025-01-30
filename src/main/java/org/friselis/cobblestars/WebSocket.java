@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import net.minecraft.server.Whitelist;
 import net.minecraft.server.WhitelistEntry;
 import net.minecraft.util.UserCache;
+import org.friselis.cobblestars.Datas.Config;
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
 import org.json.JSONObject;
@@ -153,9 +154,9 @@ public class WebSocket extends WebSocketClient {
    }
 
    public static void Start() {
-      if (!CobbleStars.instance.config.local) {
+      if (!Config.config.local) {
          try {
-            URI serverUri = new URI("ws://" + CobbleStars.instance.config.ip + ":" + CobbleStars.instance.config.port);
+            URI serverUri = new URI("ws://" + Config.config.ip + ":" + Config.config.port);
             WebSocket client = new WebSocket(serverUri);
             instance = client;
             client.connect();

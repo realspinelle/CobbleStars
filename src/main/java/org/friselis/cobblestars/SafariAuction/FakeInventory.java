@@ -9,7 +9,7 @@ class FakeInventory extends SimpleInventory {
       super(items.size());
 
       for(int i = 0; i < items.size(); ++i) {
-         this.setStack(i, (ItemStack)items.get(i));
+         this.setStack(i, items.get(i));
       }
 
    }
